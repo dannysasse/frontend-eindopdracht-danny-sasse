@@ -1,0 +1,414 @@
+@font-face {
+	font-family: "Inconsolata";
+	url("../fonts/Inconsolata-Regular.ttf");
+	font-display: swap;
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: "Inconsolata";
+	url("../fonts/Inconsolata-Bold.ttf");
+	font-display: swap;
+	font-weight: 700;
+}
+
+/* Font-display: swap zorgt ervoor dat mijn code andere lettertypes laat zien terwijl de site inconsolata aan het downloaden is */
+
+#mobile-nav {
+	display: none;
+}
+
+#mobile-nav.is-open {
+	display: block;
+	padding: 0rem;
+	line-height: 2rem;
+	background-color: #ffff66;
+}
+
+#mobile-nav li {
+	border-bottom: 1px solid black;
+	padding-left: 1rem;
+}
+
+h1 {
+	font-size: 1.25rem;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Inconsolata", Arial, sans-serif;
+}
+
+/* Dit zijn de fonts die zichtbaar zijn wanneer inconsolata aan het downloaden is */
+
+img {
+	display: block;
+	width: 100%;
+}
+
+a {
+	display: block;
+	text-decoration: none;
+	color: #000;
+}
+
+ul {
+	list-style: none;
+}
+
+h1 {
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+button {
+	background: none;
+	border: 0;
+}
+
+.mobile-hidden {
+	display: none;
+}
+
+.mobile-hidden a {
+	color: #b967ff;
+	margin-left: 1rem;
+}
+
+@media (min-width: 675px) {
+	.desktop-hidden {
+		display: none;
+	}
+
+	#menu-button {
+		display: none;
+	}
+
+	#cart {
+		display: flex;
+		justify-content: flex-end;
+		min-width: 100%;
+	}
+
+	.mobile-hidden {
+		display: block;
+	}
+}
+
+/* Hierboven staat de werking van de wisselende menu's */
+
+@media (min-width: 675px) {
+	main {
+		padding: 0% 10%
+	}
+}
+
+/* Header styling */
+body > header {
+	background: #ffff66;
+}
+
+header > nav {
+	background: white;
+	padding: 2rem 0;
+}
+
+.desktop-list {
+	display: flex;
+	flex-direction: column;
+}
+
+.home {
+	font-weight: 700;
+}
+
+@media (min-width: 675px) {
+	.desktop-list {
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-end;
+		padding-right: 10%;
+	}
+}
+
+@media (min-width: 675px) {
+	li:first-child {
+		margin-left: 0;
+		margin-right: auto;
+	}
+}
+
+body > header > a {
+	padding: 0.875rem;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #000;
+}
+
+header > div {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.875rem;
+	font-weight: 700;
+}
+
+/* hierboven had ik een div gebruikt om het menu en het mandje makkelijker te verdelen over de pagina */
+
+@media (min-width: 675px) {
+	header > div {
+		padding-right: 10%;
+	}
+}
+
+#menu-button {
+	font-weight: 700;
+	font-size: 1rem;
+}
+
+/* Products styling */
+.products {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0 0.875rem;
+	margin-bottom: 2rem;
+}
+
+.products > article {
+	flex: 0 0 calc(50% - 8px);
+	margin-bottom: 1rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/* de calc functie zorgt ervoor dat de producten altijd netjes verdeeld staan op mijn pagina */
+
+@media (min-width: 700px) {
+	.products > article {
+		flex: 0 0 calc(33% - 8px);
+	}
+}
+
+@media (min-width: 980px) {
+	.products > article {
+		flex: 0 0 calc(25% - 8px);
+	}
+}
+
+@media (min-width: 1080px) {
+	.products > article {
+		flex: 0 0 calc(20% - 8px);
+	}
+}
+
+.products > article img {
+	margin-bottom: 0.875rem;
+}
+
+.products > article h2 {
+	font-size: 1rem;
+	margin-bottom: 0.875rem;
+}
+
+/* Newsletter styling */
+.products + section {
+	padding: 0 0.875rem;
+	margin-bottom: 2rem;
+}
+
+.products + section > * {
+	padding: 3rem;
+}
+
+.products + section > div {
+	background: rgba(255, 255, 102, 0.5);
+}
+
+.products + section > div h2 {
+	margin-bottom: 1rem;
+	color: #ff71ce;
+}
+
+.products + section > form {
+	background: #ffff66;
+}
+
+.products + section > form input,
+.prducts + section > form button {
+	display: block;
+}
+
+.products + section > form input {
+	margin-bottom: 0.625rem;
+	padding: 0.500rem;
+	width: 100%;
+}
+
+.products + section > form button {
+	background: #b967ff;
+	padding: 0.500rem 0.625rem;
+	text-transform: uppercase;
+	color: white;
+}
+
+@media (min-width: 700px) {
+	.newsletter {
+		display: flex;
+	}
+}
+
+@media (min-width: 700px) {
+	.products + section > div {
+		max-width: 50%
+	}
+}
+
+@media (min-width: 700px) {
+	.products + section > form {
+		min-width: 50%;
+	}
+}
+
+/* Ik moest hierboven even moeilijk doen om ervoor te zorgen dat beide blokken even groot zijn. Dit deed hij niet vanzelf */
+
+/* Footer styling */
+footer {
+	text-align: center;
+	padding: 2rem 0;
+}
+
+footer > section {
+	margin-bottom: 2rem;
+}
+
+@media (min-width: 700px) {
+	footer {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0% 10%;
+		justify-content: space-between
+	}
+}
+
+@media (min-width: 700px) {
+	footer > p {
+		min-width: 100%;
+		justify-content: center;
+	}
+}
+
+footer > section h2 {
+	color: #ff71ce;
+	font-size: 1rem;
+	margin-bottom: 1rem;
+}
+
+footer > section a {
+	color: #b967ff;
+	line-height: 1.25;
+}
+
+
+/* states */
+a:hover {
+	opacity: 50%;
+}
+
+a:active {
+	font-weight: 700;
+}
+
+/* Product details styling */
+.product-details {
+	padding: 0 0.875rem;
+	margin-bottom: 2rem;
+}
+
+.detail-page img {
+	margin-bottom: 1rem;
+}
+
+.product-details h1 {
+	text-transform: uppercase;
+	text-align: left;
+	color: #ff71ce;
+	margin-bottom: 1rem;
+}
+
+.product-details .price {
+	font-size: 1.25rem;
+	line-height: 1.25;
+	margin-bottom: 1rem;
+}
+
+.product-details p {
+	margin-bottom: 3rem;
+}
+
+.product-details select {
+	padding: 0.625rem;
+	display: block;
+	width: 100%;
+	margin-bottom: 0.625rem;
+}
+
+.product-details form > button {
+	background: #b967ff;
+	display: block;
+	width: 100%;
+	padding: 0.625rem 0;
+	color: white;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+
+/* product description */
+.detail-page .product-description h2 {
+	padding: 0;
+	color: black;
+	margin-bottom: 1rem;
+}
+
+.product-description a {
+	color: #ff71ce;
+	font-size: 1.25rem;
+}
+
+.product-description div {
+	margin-bottom: 3rem;
+}
+
+.product-description ul {
+	padding-left: 20px;
+	list-style: disc;
+	margin-bottom: 1rem;
+	line-height: 1.5;
+}
+
+@media (min-width: 700px) {
+	.detail-page-details {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	.detail-page-details > * {
+		flex: 0 0 calc(50% - 16px);
+		margin: auto;
+		margin-top: 0px;
+		max-width: 400px;
+	}
+}
+
+/* more from this collection */
+.detail-page h2 {
+	padding: 0 0.875rem;
+	margin-bottom: 1rem;
+	color: #ff71ce;
+}
+
+.detail-page article h2 {
+	color: black;
+}
